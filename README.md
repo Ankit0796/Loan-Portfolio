@@ -1,7 +1,7 @@
 # Loan Portfolio Dashboard
 
 ### Dashboard Link : https://app.powerbi.com/groups/c5c6dc90-c94a-4976-a473-05668be8bc11/reports/8415be34-8629-4ae1-b4c3-f2b9e7a437ce/a46131874bc135d4de0a?experience=power-bi
-
+### Dataset Link : https://drive.google.com/file/d/1OyHBNoiY3XLMaVqaz5HN5c_HNYAOrn-z/view?usp=drive_link
 ## Business Context:
 
 A mid-sized digital lending company offers personal loans to individuals across India. The company has been issuing loans since 2013 and has amassed over 200,000 loan records. They now want to monitor loan performance, borrower profiles, and credit risk using a comprehensive Power BI dashboard.

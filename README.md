@@ -1,49 +1,71 @@
-# 📊 Loan Portfolio Insights Dashboard (2013–2018)
+# Loan Portfolio Dashboard
 
-## 🧾 Overview
+### Dashboard Link : https://app.powerbi.com/groups/c5c6dc90-c94a-4976-a473-05668be8bc11/reports/8415be34-8629-4ae1-b4c3-f2b9e7a437ce/a46131874bc135d4de0a?experience=power-bi
 
-This project is a comprehensive Power BI dashboard built to analyze a loan portfolio dataset spanning from **2013 to 2018**. It is divided into three key segments:
+## Business Context:
 
-1. **Portfolio Overview**
-2. **Risk Evaluation & Default Patterns**
-3. **Business Performance Analysis**
+A mid-sized digital lending company offers personal loans to individuals across India. The company has been issuing loans since 2013 and has amassed over 200,000 loan records. They now want to monitor loan performance, borrower profiles, and credit risk using a comprehensive Power BI dashboard.
 
-The dashboard enables stakeholders to monitor borrower behavior, identify high-risk areas, and analyze business performance over time.
+## Business Goals and Objectives
+1.	Track overall loan performance: total disbursed amount, interest income, average loan size.
+2.	Reduce default rate: identify high-risk borrower patterns by credit score, income, employment type, DTI ratio.
+3.	Optimize customer acquisition: identify which demographics and loan purposes are most profitable.
+4.	Support data-driven lending decisions: build borrower profiles that reduce risk while maximizing growth.
+5.	Monitor portfolio growth and trends over time and across segments.
 
----
+## Key Business Questions to Answer
+📈 Portfolio Performance
 
-## 📁 Dataset Features
+•	How many loans have been issued over time?
 
-The dataset consists of detailed loan information with the following columns:
+•	What is the total and average loan amount disbursed?
 
-| Column Name         | Description |
-|---------------------|-------------|
-| `LoanID`            | Unique identifier for each loan |
-| `Age`               | Age of the borrower |
-| `Income`            | Annual income of the borrower |
-| `LoanAmount`        | Total loan amount |
-| `CreditScore`       | Borrower's credit score |
-| `MonthsEmployed`    | Duration of employment in months |
-| `NumCreditLines`    | Number of active credit lines |
-| `InterestRate`      | Interest rate on the loan |
-| `LoanTerm`          | Duration of the loan in months |
-| `DTIRatio`          | Debt-to-Income Ratio |
-| `Education`         | Education level of the borrower |
-| `EmploymentType`    | Employment status (e.g., Full-time, Part-time) |
-| `MaritalStatus`     | Marital status (Single, Married, Divorced) |
-| `HasMortgage`       | Binary flag indicating if the borrower has an existing mortgage |
-| `HasDependents`     | Binary flag for number of dependents |
-| `LoanPurpose`       | Purpose of the loan (Home, Auto, Education, etc.) |
-| `HasCoSigner`       | Whether a co-signer is present |
-| `Default`           | Binary flag indicating loan default |
-| `Date`              | Date of loan origination |
-| `CreditScoreBin`    | Categorized credit score (Very Low to High) |
-| `IncomeBracket`     | Categorized income levels (Low, Medium, High) |
-| `AgeBracket`        | Grouped age categories (Teen, Adult, etc.) |
+•	What is the total interest revenue?
 
----
 
-## 📌 Dashboard Highlights
+💸 Credit Risk
+
+•	What is the overall default rate?
+
+•	What are the default rates by credit score, income bracket, age group, or employment type?
+
+•	Are co-signed loans less likely to default?
+
+👥 Customer Profile Insights
+
+•	What is the demographic profile (age, income, employment) of borrowers?
+
+•	How does loan performance vary by loan purpose or marital status?
+
+•	Are certain education or employment types riskier?
+
+
+
+## Setup Instructions for Power BI Gateway Integration with SQL & Incremental Refresh
+
+
+### 1. Prepare the SQL Database
+- Ensure your SQL Server is accessible and has the required data views/tables.
+- Use indexed datetime columns for incremental refresh logic.
+
+### 2. Develop Power BI Report
+- Load data from SQL Server using DirectQuery or Import mode.
+- Apply filters using parameters like `RangeStart` and `RangeEnd` in Power Query.
+- Define policies for incremental refresh in the Power BI model settings.
+
+### 3. Configure On-Premises Gateway
+- Install and register the [On-Premises Data Gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install) on your server.
+- Map your local SQL connection to the cloud Power BI service.
+
+### 4. Publish & Schedule Refresh
+- Publish the Power BI report to Power BI Service.
+- Set up the data source credentials and schedule refresh via the gateway.
+## 🔄 Incremental Refresh Logic
+
+Ensure your table contains a **DateTime column** to be used for partitioning. Power BI uses `RangeStart` and `RangeEnd` parameters for dynamic filtering.
+
+
+# Snapshot of Dashboard (Power BI Service)
 
 ### 🔵 1. Overview
 - Total Borrowers: **255.35K**
@@ -58,8 +80,6 @@ The dataset consists of detailed loan information with the following columns:
 
 ![image](https://github.com/user-attachments/assets/3ac45f7d-276d-4b31-ad23-db4191faa08a)
 
----
-
 ### 🔴 2. Risk Evaluation & Default Patterns
 - Total Defaults: **29.65K**
 - Avg. Defaulter Income: **71.84K**
@@ -71,10 +91,7 @@ The dataset consists of detailed loan information with the following columns:
 - Credit Score vs. Default Frequency
 - Default Rates across **Income Brackets**, **Age Groups**, and **Loan Purposes**
 
-
 ![image](https://github.com/user-attachments/assets/0224a86b-b1e5-484c-a26a-934985e6bd64)
-
----
 
 ### 🔵 3. Business Performance Analysis
 - Total Loan Amount: **₹32.6 Billion**
@@ -88,9 +105,10 @@ The dataset consists of detailed loan information with the following columns:
 
 ![image](https://github.com/user-attachments/assets/00a18dc7-8207-49f5-b0de-0dcd8378b1c7)
 
-![image](https://github.com/user-attachments/assets/809664d3-faf6-46b4-91af-1486bfb61b6e)
+#### Key Visuals:
+- Interest Income by **Credit Score**, **Employment Type**, and **Income Bracket**
 
----
+![image](https://github.com/user-attachments/assets/809664d3-faf6-46b4-91af-1486bfb61b6e)
 
 ## 🛠️ Tools & Technologies Used
 
@@ -100,7 +118,7 @@ The dataset consists of detailed loan information with the following columns:
 | **Excel / CSV** | Data transformation, cleaning |
 | **DAX** | Calculated columns, measures |
 
----
+
 
 ## 🚀 Key Insights
 

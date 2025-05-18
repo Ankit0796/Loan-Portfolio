@@ -56,6 +56,8 @@ The dataset consists of detailed loan information with the following columns:
 - **Default Rate Trend** (Year-wise)
 - **Loan Purpose** & **Marital Status by Age Group**
 
+![image](https://github.com/user-attachments/assets/3ac45f7d-276d-4b31-ad23-db4191faa08a)
+
 ---
 
 ### 🔴 2. Risk Evaluation & Default Patterns
@@ -69,6 +71,9 @@ The dataset consists of detailed loan information with the following columns:
 - Credit Score vs. Default Frequency
 - Default Rates across **Income Brackets**, **Age Groups**, and **Loan Purposes**
 
+
+![image](https://github.com/user-attachments/assets/0224a86b-b1e5-484c-a26a-934985e6bd64)
+
 ---
 
 ### 🔵 3. Business Performance Analysis
@@ -81,6 +86,8 @@ The dataset consists of detailed loan information with the following columns:
 - Loan Amount & Interest Income trends (by year)
 - Loan Distribution by **Credit Score**, **Employment Type**, and **Income Bracket**
 
+![image](https://github.com/user-attachments/assets/4083374c-b2e5-4d98-a67e-7100608caa82)
+
 ---
 
 ## 🛠️ Tools & Technologies Used
@@ -90,7 +97,6 @@ The dataset consists of detailed loan information with the following columns:
 | **Power BI** | Data visualization & dashboard creation |
 | **Excel / CSV** | Data transformation, cleaning |
 | **DAX** | Calculated columns, measures |
-| **Python (optional)** | Preprocessing & data wrangling |
 
 ---
 
@@ -102,48 +108,4 @@ The dataset consists of detailed loan information with the following columns:
 - **Business and education loans** have higher default risks.
 - Interest income peaked in **2015 and 2018**, aligned with peak loan issuance.
 
----
 
-## 📂 Repository Structure
-
-```
-📁 Loan-Portfolio-Dashboard
-│
-├── 📊 Dashboard Images/
-│   ├── Overview_Dashboard.png
-│   ├── Risk_Evaluation_Dashboard.png
-│   └── Business_Performance_Dashboard.png
-│
-├── 📄 Dataset (Optional)/
-│   └── loan_data.csv
-│
-├── 📁 PowerBI File/
-│   └── Loan_Insights_Dashboard.pbix
-│
-└── 📄 README.md
-```
-
----
-
-## 💡 Future Improvements
-
-- Add predictive modeling for **default risk classification**.
-- Integrate **live data updates** via Power BI Service.
-- Expand analysis using **geographical trends** (if location data is available).
-
----
-
-## 📬 Contact
-
-If you have any questions or suggestions, feel free to reach out:
-
-**Ankit Dutt**  
-📧 your-email@example.com  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/yourprofile)  
-📍 India  
-
----
-
-## ⭐️ Give it a Star
-
-If you found this project insightful, please ⭐ the repository to show your support!

@@ -86,7 +86,9 @@ The dataset consists of detailed loan information with the following columns:
 - Loan Amount & Interest Income trends (by year)
 - Loan Distribution by **Credit Score**, **Employment Type**, and **Income Bracket**
 
-![image](https://github.com/user-attachments/assets/4083374c-b2e5-4d98-a67e-7100608caa82)
+![image](https://github.com/user-attachments/assets/00a18dc7-8207-49f5-b0de-0dcd8378b1c7)
+
+![image](https://github.com/user-attachments/assets/809664d3-faf6-46b4-91af-1486bfb61b6e)
 
 ---
 
